@@ -1,0 +1,55 @@
+/*
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
+ */
+.reports__wrapper {
+  height: 100%;
+  width: 100%;
+  color: #293742; }
+  .reports__wrapper .pt-tabs {
+    height: 100%; }
+    .reports__wrapper .pt-tabs .pt-tab-list {
+      width: 40% !important;
+      border-right: 1px solid rgba(16, 22, 26, 0.15) !important;
+      background-color: white; }
+      .reports__wrapper .pt-tabs .pt-tab-list .pt-tab-indicator {
+        border-radius: 0 !important; }
+      .reports__wrapper .pt-tabs .pt-tab-list .pt-tab {
+        border-bottom: 1px solid rgba(16, 22, 26, 0.15) !important; }
+        .reports__wrapper .pt-tabs .pt-tab-list .pt-tab:focus {
+          outline: none !important; }
+    .reports__wrapper .pt-tabs .pt-tab-panel {
+      width: 60% !important;
+      border-right: 1px solid rgba(16, 22, 26, 0.15) !important;
+      padding: 10px !important; }
+      .reports__wrapper .pt-tabs .pt-tab-panel .form__wrapper {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .reports__wrapper .pt-tabs .pt-tab-panel .form__wrapper .form__header {
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px 10px;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+          box-shadow: 0 1px 0 rgba(16, 22, 26, 0.15);
+          border: 1px solid rgba(16, 22, 26, 0.15);
+          border-bottom: 0;
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+          .reports__wrapper .pt-tabs .pt-tab-panel .form__wrapper .form__header div {
+            font-variant: small-caps;
+            font-weight: bold;
+            font-size: 1.1em; }
+        .reports__wrapper .pt-tabs .pt-tab-panel .form__wrapper .form__section {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          justify-content: space-between;
+          height: calc(100% - 35px - 1px);
+          border: 1px solid rgba(16, 22, 26, 0.15);
+          border-top: 0;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px; }

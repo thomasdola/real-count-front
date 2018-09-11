@@ -1,0 +1,83 @@
+/*
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
+ */
+.beneficiaries__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f5f8fa; }
+  .beneficiaries__wrapper .beneficiaries__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    border: 1px solid rgba(16, 22, 26, 0.15);
+    border-top: 0;
+    height: 40px; }
+  .beneficiaries__wrapper .beneficiaries__content {
+    padding: 10px;
+    height: calc(100% - 40px); }
+    .beneficiaries__wrapper .beneficiaries__content section {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: white;
+      position: relative; }
+      .beneficiaries__wrapper .beneficiaries__content section div.loading {
+        background-color: white;
+        z-index: 9;
+        position: absolute;
+        height: calc(100% - 35px);
+        margin-top: 35px;
+        border: 1px solid rgba(16, 22, 26, 0.15);
+        border-top: 0;
+        transition: all 1s; }
+      .beneficiaries__wrapper .beneficiaries__content section header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        width: 100%;
+        height: 35px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border: 1px solid rgba(16, 22, 26, 0.15);
+        box-shadow: 0 1px 0 rgba(16, 22, 26, 0.15);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+        .beneficiaries__wrapper .beneficiaries__content section header div:nth-child(1) {
+          display: flex; }
+        .beneficiaries__wrapper .beneficiaries__content section header div.per-page__wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .beneficiaries__wrapper .beneficiaries__content section header div.per-page__wrapper span {
+            margin: 0 3px 0 5px; }
+      .beneficiaries__wrapper .beneficiaries__content section .table__wrapper {
+        overflow: hidden !important;
+        border-bottom-left-radius: 3px !important;
+        border-bottom-right-radius: 3px !important;
+        height: 100% !important;
+        border: 1px solid rgba(16, 22, 26, 0.15) !important;
+        border-top: 0 !important;
+        width: 100%; }
+        .beneficiaries__wrapper .beneficiaries__content section .table__wrapper:focus {
+          outline: none !important; }
+      .beneficiaries__wrapper .beneficiaries__content section .table__header {
+        color: #182026 !important;
+        font-size: 14px !important;
+        text-transform: uppercase;
+        font-variant: small-caps;
+        line-height: 1 !important;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) !important;
+        background-color: #f5f8fa !important;
+        border: none !important;
+        font-weight: bold !important; }
+      .beneficiaries__wrapper .beneficiaries__content section .table__cell {
+        border: none !important; }
+      .beneficiaries__wrapper .beneficiaries__content section .table__sort__header {
+        cursor: pointer; }
+      .beneficiaries__wrapper .beneficiaries__content section .fixedDataTableCellLayout_main:last-child {
+        border-right: 0 !important; }

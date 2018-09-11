@@ -1,0 +1,196 @@
+/*
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
+ */
+.table__wrapper {
+  overflow: hidden !important;
+  height: calc(100% - 5px) !important;
+  width: 100% !important;
+  border: none !important;
+  border-radius: 0 !important; }
+  .table__wrapper:focus {
+    outline: none !important; }
+
+.fixedDataTableCellLayout_main:last-child {
+  border-right: 0 !important; }
+
+.table__header {
+  color: #293742 !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) !important;
+  background-color: #f5f8fa !important;
+  border: none !important;
+  font-weight: bold !important;
+  font-variant: small-caps; }
+
+.table__cell {
+  border: none !important; }
+
+.transparent__back {
+  background-color: transparent !important; }
+
+.roles__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: #293742; }
+  .roles__wrapper .roles__toolbar {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    border: 1px solid rgba(16, 22, 26, 0.15);
+    border-top: 0;
+    border-left: 0; }
+  .roles__wrapper .roles__content {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100% - 40px); }
+    .roles__wrapper .roles__content div.list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+      height: 100%;
+      border-right: 1px solid rgba(16, 22, 26, 0.15); }
+      .roles__wrapper .roles__content div.list header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        height: 35px;
+        min-height: 35px;
+        box-shadow: 0 1px 0 rgba(16, 22, 26, 0.15);
+        background-color: white;
+        border-bottom: 1px solid rgba(16, 22, 26, 0.15);
+        font-variant: small-caps;
+        font-weight: bold;
+        font-size: 1.1em; }
+        .roles__wrapper .roles__content div.list header .devices__text {
+          display: inline-block;
+          margin-left: 5px; }
+        .roles__wrapper .roles__content div.list header .group__actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .roles__wrapper .roles__content div.list header .group__actions .view-users__toggle {
+            margin-bottom: 0;
+            margin-right: 20px; }
+      .roles__wrapper .roles__content div.list section {
+        height: calc(100% - (35px * 2));
+        width: 100%; }
+      .roles__wrapper .roles__content div.list footer {
+        display: flex;
+        height: 35px;
+        min-height: 35px;
+        justify-content: space-between;
+        box-sizing: border-box;
+        align-items: center;
+        background-color: white;
+        padding: 5px 10px;
+        border-top: 1px solid rgba(16, 22, 26, 0.15);
+        font-variant: small-caps; }
+    .roles__wrapper .roles__content div.single {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100% - 50%);
+      height: 100%; }
+      .roles__wrapper .roles__content div.single header {
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 10px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        box-shadow: 0 1px 0 rgba(16, 22, 26, 0.15);
+        border: 1px solid rgba(16, 22, 26, 0.15);
+        border-bottom: 0;
+        font-variant: small-caps;
+        font-weight: bold;
+        font-size: 1.1em;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+      .roles__wrapper .roles__content div.single section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 35px);
+        border: 1px solid rgba(16, 22, 26, 0.15);
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px; }
+        .roles__wrapper .roles__content div.single section div.policies {
+          background: white;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden; }
+          .roles__wrapper .roles__content div.single section div.policies .bms-collapse-header {
+            height: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px; }
+            .roles__wrapper .roles__content div.single section div.policies .bms-collapse-header input {
+              margin-right: 10px; }
+          .roles__wrapper .roles__content div.single section div.policies .bms-collapse-row .bms-collapse-row-label {
+            height: 60px;
+            border-bottom: 1px solid rgba(16, 22, 26, 0.15);
+            display: flex;
+            align-items: center; }
+            .roles__wrapper .roles__content div.single section div.policies .bms-collapse-row .bms-collapse-row-label label {
+              width: 100%; }
+            .roles__wrapper .roles__content div.single section div.policies .bms-collapse-row .bms-collapse-row-label-plain {
+              justify-content: space-between; }
+          .roles__wrapper .roles__content div.single section div.policies .bms-collapse-row .bms-collapse-row-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 10px 10%; }
+            .roles__wrapper .roles__content div.single section div.policies .bms-collapse-row .bms-collapse-row-content section.list {
+              flex-direction: row;
+              justify-content: space-between;
+              border: none;
+              margin-bottom: 10px; }
+              .roles__wrapper .roles__content div.single section div.policies .bms-collapse-row .bms-collapse-row-content section.list span.key {
+                display: flex;
+                justify-content: space-around;
+                width: 20%; }
+              .roles__wrapper .roles__content div.single section div.policies .bms-collapse-row .bms-collapse-row-content section.list div.value {
+                width: 70%; }
+        .roles__wrapper .roles__content div.single section footer.policies {
+          display: flex;
+          height: 35px;
+          min-height: 35px;
+          justify-content: space-between;
+          box-sizing: border-box;
+          align-items: center;
+          background-color: white;
+          padding: 5px 10px;
+          border-top: 1px solid rgba(16, 22, 26, 0.15); }
+        .roles__wrapper .roles__content div.single section div.users {
+          height: calc(100% - 700px);
+          min-height: 300px;
+          display: flex;
+          border-top: 1px solid rgba(16, 22, 26, 0.15);
+          flex-direction: column;
+          justify-content: space-between; }
+          .roles__wrapper .roles__content div.single section div.users .users-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            height: 35px;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+            border-bottom: 1px solid rgba(16, 22, 26, 0.15);
+            font-variant: small-caps;
+            font-weight: bold;
+            font-size: 1.1em; }
+          .roles__wrapper .roles__content div.single section div.users .users-section {
+            height: calc(100% - 35px);
+            background: white;
+            width: 100%; }

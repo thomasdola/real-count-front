@@ -1,0 +1,240 @@
+@import "@blueprintjs/core/lib/scss/variables";
+
+$toolbar-height: 40px;
+$header-height: 35px;
+$att-list-width: 45%;
+
+.table__wrapper{
+    overflow: hidden !important;
+    height: calc(100% - 5px) !important;
+    width: 100% !important;
+    border: none !important;
+    border-radius: 0 !important;
+
+    &:focus{
+        outline: none !important;
+    }
+}
+
+.fixedDataTableCellLayout_main:last-child{
+    border-right: 0 !important;
+}
+
+.table__header{
+    color: $dark-gray3 !important;
+    line-height: 1 !important;
+    background-image: linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0)) !important;
+    background-color: #f5f8fa !important;
+    border: none !important;
+    font-weight: bold !important;
+    font-size: 1em;   
+    font-variant: small-caps; 
+}
+
+.table__cell{
+    border: none !important;
+}
+
+.table__sort__header{
+    cursor: pointer;
+}
+
+.attendance__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    color: $dark-gray3 ;
+
+    .attendance__toolbar{
+        height: $toolbar-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        background: white;
+        border: 1px solid rgba(16,22,26,.15);
+        border-top: 0;
+        border-left: 0;     
+        
+        .date-control{
+            display: flex;
+            align-items: center;
+
+            .date{
+                padding-right: 5px;
+                padding-left: 5px;
+                //font-variant: small-caps;
+                font-weight: bold;
+                //font-size: 1.5em;
+                margin-bottom: 0px;
+                color: $dark-gray5;
+            }
+        }
+    }
+
+    .attendance__content{
+        display: flex;
+        justify-content: space-between;
+        height: calc(100% - #{$toolbar-height});
+
+        div.list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: $att-list-width;
+            height: 100%;
+            border-right: 1px solid rgba(16,22,26,.15); 
+
+            header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px;
+                height: $header-height;
+                min-height: $header-height;
+                box-shadow: 0 1px 0 rgba(16,22,26,.15);           
+                background-color: white;
+                border-bottom: 1px solid rgba(16,22,26,.15); 
+
+                .daily__text, .beneficiaries__text{
+                    display: inline-block;
+                    margin-left: 5px;
+                    font-variant: small-caps;
+                    font-size: 1.1em;
+                }
+            }
+
+            section{
+                height: calc(100% - (#{$header-height} * 2));
+                width: 100%;
+                background-color: white;
+            }
+
+            footer{
+                display: flex;
+                height: $header-height;
+                min-height: $header-height;
+                justify-content: space-between;
+                box-sizing: border-box;
+                align-items: center;
+                background-color: white;
+                padding: 5px 10px;
+                font-variant: small-caps;
+                border-top: 1px solid rgba(16,22,26,.15);
+            }
+        }
+
+        div.single{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: calc(100% - #{$att-list-width});
+            height: 100%;
+
+            header{
+                height: $header-height;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 10px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                box-shadow: 0 1px 0 rgba(16,22,26,.15);
+                border: 1px solid rgba(16,22,26,.15);
+                border-bottom: 0;   
+                font-variant: small-caps;
+                font-size: 1em;             
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+            }
+
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: calc(100% - #{$header-height});
+                border: 1px solid rgba(16,22,26,.15);
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+
+                div.calendar{
+                    background: white;
+                    width: 100%;
+                    height: 100%;
+
+                    table{
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+
+                        th, td {
+                            text-align: center;
+                            padding: 3px;
+                            border: 1px solid rgba(16,22,26,.15);
+                        }
+                        td{
+                            width: 30px;
+                            height: 50px !important;
+                        }
+                        tr{
+                            border-right: 0;
+
+                            td:first-child{
+                                border-left: 0;
+                            }
+                            td:last-child{
+                                border-right: 0;
+                            }
+                        }
+                        tr:first-child, th{
+                            border-top: 0;
+                            border-left: 0;
+
+                            th:last-child{
+                                border-right: 0;
+                            }
+                        }
+                        tr:last-child{
+
+                            td{
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                div.graph{
+                    height: calc(100% - 520px);
+                    min-height: 300px;
+                    display: flex;
+                    border-top: 1px solid rgba(16,22,26,.15);
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .graph-header{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 5px 10px;
+                        height: $header-height;
+                        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));                
+                        // box-shadow: 0 1px 0 rgba(16,22,26,.15);
+                        border-bottom: 1px solid rgba(16,22,26,.15);
+                        font-variant: small-caps;
+                        font-size: 1em;
+                    }
+
+                    .graph-section{
+                        height: calc(100% - #{$header-height});
+                        padding: 5px;
+                        background: white;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}

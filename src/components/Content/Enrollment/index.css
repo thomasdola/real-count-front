@@ -1,0 +1,160 @@
+/*
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
+ */
+.wrapper {
+  height: 100%; }
+  .wrapper .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(16, 22, 26, 0.15);
+    border-top: 0;
+    padding: 1px 10px;
+    background: white; }
+  .wrapper div.content {
+    height: calc(100% - 40px);
+    display: flex; }
+    .wrapper div.content header {
+      height: 30px; }
+    .wrapper div.content .bio {
+      width: 200px; }
+      .wrapper div.content .bio header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 35px;
+        border: 1px solid rgba(16, 22, 26, 0.15);
+        border-top: 0;
+        padding: 5px;
+        text-transform: uppercase;
+        font-variant: small-caps;
+        font-size: .8em;
+        font-weight: bold;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+      .wrapper div.content .bio .picture {
+        width: 100%;
+        height: 260px;
+        border: 1px solid rgba(16, 22, 26, 0.15);
+        border-bottom: 0;
+        border-top: 0;
+        background: white;
+        padding: 5px; }
+        .wrapper div.content .bio .picture div {
+          height: 250px;
+          border-radius: 3px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+          .wrapper div.content .bio .picture div img {
+            max-width: 186px; }
+      .wrapper div.content .bio .bio-data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid rgba(16, 22, 26, 0.15);
+        height: calc(100% - 260px); }
+        .wrapper div.content .bio .bio-data header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-left-width: 0;
+          border-right-width: 0;
+          padding: 5px;
+          height: 35px;
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+          text-transform: uppercase;
+          font-variant: small-caps;
+          font-size: .9em;
+          font-weight: bold; }
+        .wrapper div.content .bio .bio-data section {
+          display: flex;
+          flex-direction: column;
+          height: calc(100% - 35px);
+          overflow-y: auto; }
+          .wrapper div.content .bio .bio-data section .fingerprint {
+            background: #f5f8fa;
+            border-bottom: 1px solid rgba(16, 22, 26, 0.15);
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            flex-basis: 200px;
+            min-height: 200px; }
+            .wrapper div.content .bio .bio-data section .fingerprint div.header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 3px;
+              border-bottom: 1px solid rgba(16, 22, 26, 0.15);
+              background: white;
+              width: 100%;
+              height: 35px;
+              text-transform: uppercase;
+              font-variant: small-caps;
+              font-size: .8em;
+              font-weight: bold; }
+            .wrapper div.content .bio .bio-data section .fingerprint div.img {
+              width: 150px;
+              height: calc(100% - 35px);
+              overflow: hidden;
+              margin: 3px auto;
+              border-radius: 3px;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              .wrapper div.content .bio .bio-data section .fingerprint div.img img {
+                max-width: 150px; }
+    .wrapper div.content .info-wrapper {
+      width: calc(100% - 200px - 5px);
+      margin: 10px 10px 0 10px;
+      border-radius: 5px;
+      border: 1px solid rgba(16, 22, 26, 0.15);
+      border-bottom: 0; }
+      .wrapper div.content .info-wrapper header {
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+        height: auto;
+        box-shadow: 0 1px 0 rgba(16, 22, 26, 0.15);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+      .wrapper div.content .info-wrapper .info {
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow-y: auto;
+        background: white; }
+        .wrapper div.content .info-wrapper .info section.bms-input-group {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-bottom: 15px; }
+          .wrapper div.content .info-wrapper .info section.bms-input-group header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 35px;
+            text-transform: uppercase;
+            font-variant: small-caps;
+            font-size: .9em;
+            font-weight: bold; }
+          .wrapper div.content .info-wrapper .info section.bms-input-group section.section {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between; }
+            .wrapper div.content .info-wrapper .info section.bms-input-group section.section section {
+              flex-grow: 1;
+              margin-right: 10px; }
+            .wrapper div.content .info-wrapper .info section.bms-input-group section.section section:last-child {
+              margin-right: 0; }
+          .wrapper div.content .info-wrapper .info section.bms-input-group section:last-child {
+            padding-bottom: 0; }
+
+.wrapper, .bio, .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.radio-group-label {
+  margin-bottom: 8px; }
+
+.pt-alert-contents {
+  width: 100% !important; }

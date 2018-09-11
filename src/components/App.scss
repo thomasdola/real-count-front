@@ -1,0 +1,147 @@
+$pt-intent-primary: #29166f;
+
+@import "bulma/sass/utilities/_all";
+@import "bulma/sass/elements/container.sass";
+@import "@blueprintjs/core/lib/scss/variables";
+
+$pt-intent-primary: #29166f;
+
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.ScrollWrapper {
+  background-color: $pt-app-background-color;
+  height: 100%;
+  width: 100%;
+  min-width: 1024px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.column {
+  height: 100%;  /*allows both columns to span the full height of the browser window*/
+  display: flex;
+  flex-direction: column;  /*places the left and right headers above the bottom content*/
+}
+
+#left {
+  flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
+}
+
+.top-left {
+  flex-shink: 0;
+}
+
+.top-right {
+  flex-shrink: 0;
+  display: inline-flex;
+  width: 100%;
+}
+
+.bottom {
+  flex: 1 1 0;  /*ensures that the container will take up the full height of the parent container*/
+  overflow-y: auto;  /*adds scroll to this container*/
+}
+
+.bottom__Dark{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $dark-gray5 !important;
+  a, .pt-button[class*="pt-icon-"]::before{
+    color: #bfccd6 !important;
+  }
+}
+
+.bms-small{
+  select, input.pt-input{
+    height: 24px !important;
+    font-size: 12px !important;
+  }
+  .pt-input:not(:first-child){
+    padding-left: 25px !important;
+  }
+  .pt-icon{
+    margin: 0 0 3px 7px !important;
+  }
+  &:after, .pt-icon:first-child{
+    line-height: 22px !important;
+    font-size: 14px !important;
+  }
+
+}
+
+.pt-input.bms-small{
+  height: 24px !important;
+  line-height: 24px !important;
+  font-size: 12px !important;
+}
+
+.pt-input-action.bms-small{
+  button{
+    margin: 0 !important;
+  }
+}
+
+.pt-timepicker.bms-small{
+  .pt-timepicker-arrow-row{
+    .pt-timepicker-arrow-button{
+      font-size: 12px !important;
+      padding: 0 !important;
+    }
+  }
+  .pt-timepicker-input{
+    font-size: 12px !important;
+    height: 24px !important;
+    line-height: 24px !important;
+    width: 22px !important;
+  }
+
+  .pt-timepicker-input-row{
+    height: 24px !important;
+    line-height: 24px !important;
+    width: 60px !important;
+  }
+}
+
+.bms-button{
+  &:focus{
+    outline: none !important;
+  }
+}
+
+.bms-multi-select{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-left: 10px !important;
+
+  @at-root .pt-popover-target, .pt-popover-wrapper{
+    width: 100% !important;
+  }
+
+  &-small{
+    font-size: 12px !important;
+
+    .pt-icon{
+      height: 14px !important;
+    }
+  }
+}
+
+.pt-dialog-header-title{
+  font-variant: small-caps;
+}
+
+.transparent__back{
+  background-color: transparent !important;
+}

@@ -1,0 +1,223 @@
+@import "@blueprintjs/core/lib/scss/variables";
+
+$toolbar-height: 40px;
+$picture-height: 260px;
+$picture-width: 200px;
+$header-height: 35px;
+
+@mixin horizontal-align{
+    display: flex;
+}
+
+@mixin vertical-align{
+    @include horizontal-align;
+    flex-direction: column;
+}
+
+.wrapper{
+    height: 100%;
+    // width: 100%;
+    // min-width: 1024px;
+
+    .toolbar{
+        @include horizontal-align;
+        align-items: center;
+        justify-content: space-between;
+        height: $toolbar-height;
+        width: 100%;
+        border: 1px solid rgba(16,22,26,.15);
+        border-top: 0;
+        padding: 1px 10px;
+        background: white;
+    }
+
+    div.content{
+        height: calc(100% - #{$toolbar-height});
+        display: flex;
+
+        header{
+            height: 30px;
+        }
+
+        .bio{
+            width: $picture-width;
+
+            header{
+                @include horizontal-align;
+                align-items: center;
+                justify-content: space-between;
+                height: $header-height;
+                border: 1px solid rgba(16,22,26,.15);
+                border-top: 0;
+                padding: 5px;
+                text-transform: uppercase;
+                font-variant: small-caps;
+                font-size: .8em;
+                font-weight: bold;
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+            }
+        
+            .picture{
+                width: 100%;
+                height: $picture-height;
+                // border-radius: 5px;
+                border: 1px solid rgba(16,22,26,.15);
+                border-bottom: 0;
+                border-top: 0;
+                background: white;
+                padding: 5px;
+
+                div{
+                    height: 250px;
+                    border-radius: 3px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    img{
+                        max-width: 186px;
+                    }
+                }
+            }
+        
+            .bio-data{
+                @include vertical-align;
+                width: 100%;
+                border: 1px solid rgba(16,22,26,.15);
+                height: calc(100% - #{$picture-height});
+        
+                header{
+                    @include horizontal-align;
+                    justify-content: center;
+                    align-items: center;
+                    border-left-width: 0;
+                    border-right-width: 0;
+                    padding: 5px;
+                    height: $header-height;
+                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+                    text-transform: uppercase;
+                    font-variant: small-caps;
+                    font-size: .9em;
+                    font-weight: bold;
+                }
+        
+                section{
+                    @include vertical-align;
+                    // justify-content: space-between;
+                    height: calc(100% - #{$header-height});
+                    overflow-y: auto;
+        
+                    .fingerprint{
+                        background: $pt-app-background-color;
+                        border-bottom: 1px solid rgba(16,22,26,.15);
+                        @include vertical-align;
+                        height: 200px;
+                        flex-basis: 200px;
+                        min-height: 200px;
+
+                        div.header{
+                            @include horizontal-align;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 3px;
+                            border-bottom: 1px solid rgba(16,22,26,.15);
+                            background: white;
+                            width: 100%;
+                            height: $header-height;
+                            text-transform: uppercase;
+                            font-variant: small-caps;
+                            font-size: .8em;
+                            font-weight: bold;
+                        }
+
+                        div.img{
+                            width: 150px;
+                            height: calc(100% - #{$header-height});
+                            overflow: hidden;
+                            margin: 3px auto;
+                            border-radius: 3px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img{
+                                max-width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .info-wrapper{
+            width: calc(100% - #{$picture-width} - 5px);
+            margin: 10px 10px 0 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(16,22,26,.15);
+            border-bottom: 0;
+
+            header{
+                padding: 10px;
+                border-radius: 5px 5px 0 0;
+                height: auto;
+                box-shadow: 0 1px 0 rgba(16,22,26,.15);
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+            }
+        
+            .info{
+                width: 100%;
+                height: calc(100% - #{$toolbar-height});
+                overflow-y: auto;
+                background: white;
+        
+                section.bms-input-group{
+                    @include vertical-align;
+                    width: 100%;
+                    margin-bottom: 15px;
+        
+                    header{
+                        @include horizontal-align;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 35px;
+                        text-transform: uppercase;
+                        font-variant: small-caps;
+                        font-size: .9em;
+                        font-weight: bold;
+                    }
+        
+                    section.section{
+                        padding: 10px;
+                        @include horizontal-align;
+                        justify-content: space-between;
+
+                        section{
+                            flex-grow: 1;
+                            margin-right: 10px;
+                        }
+                        section:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                    section:last-child{
+                        padding-bottom: 0;
+                    }
+                }
+        
+                
+            }
+        }
+    }
+}
+.wrapper, .bio, .info-wrapper{
+    @include vertical-align;
+    justify-content: space-between;
+}
+
+.radio-group-label{
+    margin-bottom: 8px;
+}
+
+.pt-alert-contents{
+    width: 100% !important;
+}

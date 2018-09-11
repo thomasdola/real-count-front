@@ -1,0 +1,38 @@
+.dd__selectControl {
+  border: none !important;
+  background-color: #f5f8fa !important;
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2), inset 0 -1px 0 rgba(16, 22, 26, 0.1) !important;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) !important;
+  height: 30px !important; }
+
+.dd__wrapper {
+  margin-top: 5px !important; }
+
+.dd__opened .dd__selectControl {
+  box-shadow: 0 0 0 0 rgba(19, 124, 189, 0), 0 0 0 0 rgba(19, 124, 189, 0), inset 0 0 0 1px rgba(16, 22, 26, 0.15), inset 0 1px 1px rgba(16, 22, 26, 0.2) !important;
+  background: #ffffff !important; }
+
+.dd__list {
+  border-color: rgba(16, 22, 26, 0.15) !important;
+  z-index: 9999999999999999999999999; }
+
+.bms__select__popover {
+  padding: 2px !important; }
+  .bms__select__popover .pt-multi-select {
+    display: flex !important;
+    padding-left: 10px !important;
+    align-items: center;
+    padding-right: 5px; }
+  .bms__select__popover .pt-overlay-content {
+    width: 99% !important; }
+    .bms__select__popover .pt-overlay-content .pt-popover {
+      width: 100% !important; }
+      .bms__select__popover .pt-overlay-content .pt-popover .pt-input-group {
+        padding: 0 2px !important; }
+        .bms__select__popover .pt-overlay-content .pt-popover .pt-input-group input {
+          outline: none !important; }
+
+.pt-input-group + .pt-menu {
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: scroll; }

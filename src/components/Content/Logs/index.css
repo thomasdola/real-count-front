@@ -1,0 +1,77 @@
+/*
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
+ */
+.logs__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f5f8fa;
+  color: #293742; }
+  .logs__wrapper .logs__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    border: 1px solid rgba(16, 22, 26, 0.15);
+    border-top: 0;
+    height: 40px; }
+
+.logs__content {
+  padding: 10px;
+  height: calc(100% - 40px); }
+  .logs__content section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white; }
+    .logs__content section header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      width: 100%;
+      height: 35px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border: 1px solid rgba(16, 22, 26, 0.15);
+      box-shadow: 0 1px 0 rgba(16, 22, 26, 0.15);
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+      font-variant: small-caps;
+      font-weight: bold;
+      font-size: 1.1em; }
+      .logs__content section header .logs__text {
+        margin-left: 10px; }
+      .logs__content section header div.per-page__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: normal; }
+        .logs__content section header div.per-page__wrapper span {
+          margin: 0 3px 0 5px; }
+    .logs__content section .table__wrapper {
+      overflow: hidden !important;
+      border-bottom-left-radius: 3px !important;
+      border-bottom-right-radius: 3px !important;
+      height: 100% !important;
+      border: 1px solid rgba(16, 22, 26, 0.15) !important;
+      border-top: 0 !important; }
+      .logs__content section .table__wrapper:focus {
+        outline: none !important; }
+    .logs__content section .table__header {
+      color: #293742 !important;
+      font-size: 14px !important;
+      line-height: 1 !important;
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)) !important;
+      background-color: #f5f8fa !important;
+      border: none !important;
+      font-weight: bold !important;
+      font-variant: small-caps; }
+    .logs__content section .table__cell {
+      border: none !important; }
+    .logs__content section .table__sort__header {
+      cursor: pointer; }
+    .logs__content section .fixedDataTableCellLayout_main:last-child {
+      border-right: 0 !important; }

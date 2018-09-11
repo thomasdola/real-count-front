@@ -1,0 +1,99 @@
+@import "@blueprintjs/core/lib/scss/variables";
+$header-height: 35px;
+$box-min-height: 500px;
+
+
+.profile__collapse{
+    position: absolute;
+    right: 35%;
+    top: 0;
+    z-index: 999;
+    width: 30%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f5f8fa;
+    
+
+    .profile__wrapper{
+        height: $box-min-height;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $dark-gray3;
+
+        .profile__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            height: $header-height;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));                
+            box-shadow: 0 1px 0 rgba(16,22,26,.15);
+        }
+
+        .profile__section{
+            height: $box-min-height - $header-height - 1px;
+            background-color: white;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            overflow-y: auto;
+
+            .row.personal{
+                padding: 10px 20px;
+                display: flex;
+                flex-direction: column;
+                font-size: 1.1em;
+                border-bottom: 2px solid $gray5;
+
+                .item{
+                    display: flex;
+                    padding-bottom: 10px;
+
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+
+            .row.password{
+                padding: 10px 20px;
+                .data{
+                    .pt-label{
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .row.gates{
+                padding: 10px 20px;
+                border-bottom: 2px solid $gray5;
+
+                .title{
+                    font-size: 1.2em;
+                    padding-bottom: 5px;
+                    font-variant: small-caps;
+                    font-weight: bold;
+                }
+            }
+
+            .row.policies{
+                padding: 10px 20px;
+                border-bottom: 2px solid $gray5;
+
+                .title{
+                    font-size: 1.2em;
+                    padding-bottom: 5px;
+                    font-variant: small-caps;
+                    font-weight: bold;
+                }
+                .data{
+                    .policy{
+                        padding-bottom: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

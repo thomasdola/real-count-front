@@ -1,0 +1,114 @@
+$pt-intent-primary: #29166f;
+
+@import "@blueprintjs/core/lib/scss/variables";
+$header-height: 35px;
+
+.beneficiaries__wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $pt-app-background-color;
+
+    .beneficiaries__toolbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        background: white;
+        border: 1px solid rgba(16,22,26,.15);
+        border-top: 0;
+        height: 40px;
+    }
+
+    .beneficiaries__content{
+        padding: 10px;
+        height: calc(100% - 40px);
+
+        section{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: white;
+            position: relative;
+
+            div.loading{
+                background-color: white;
+                z-index: 9;
+                position: absolute;
+                height: calc(100% - #{$header-height});
+                margin-top: $header-height;
+                border: 1px solid rgba(16,22,26,.15);
+                border-top: 0;
+                transition: all 1s;
+            }
+
+            header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px;
+                width: 100%;
+                height: $header-height;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                border: 1px solid rgba(16,22,26,.15);
+                box-shadow: 0 1px 0 rgba(16,22,26,.15);
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+
+                div:nth-child(1){
+                    display: flex;
+                }
+
+                div.per-page__wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span{
+                        margin: 0 3px 0 5px;
+                    }
+                }
+            }
+
+            .table__wrapper{
+                overflow: hidden !important;
+                border-bottom-left-radius: 3px !important;
+                border-bottom-right-radius: 3px !important;
+                height: 100% !important;
+                border: 1px solid rgba(16,22,26,.15) !important;
+                border-top: 0 !important;
+                width: 100%;
+
+                &:focus{
+                    outline: none !important;
+                }
+            }
+
+            .table__header{
+                color: #182026 !important;
+                font-size: 14px !important;
+                text-transform: uppercase;
+                font-variant: small-caps;
+                line-height: 1 !important;
+                background-image: linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0)) !important;
+                background-color: #f5f8fa !important;
+                border: none !important;
+                font-weight: bold !important;
+            }
+
+            .table__cell{
+                border: none !important;
+            }
+
+            .table__sort__header{
+                cursor: pointer;
+            }
+
+            .fixedDataTableCellLayout_main:last-child{
+                border-right: 0 !important;
+            }
+        }
+    }
+}

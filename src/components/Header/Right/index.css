@@ -1,0 +1,15 @@
+.topContent {
+  height: 68px;
+  left: calc((50vw - 1390px / 2 + 278px) - 4px);
+  margin: 0 -4px;
+  width: calc(100vw - 278px - 24px + 16px);
+  max-width: 1108px;
+  min-width: 776px;
+  /*padding-left: 8px;*/
+  /*padding-right: 8px;*/
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #e6ebf1; }

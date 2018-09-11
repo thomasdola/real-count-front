@@ -1,0 +1,30 @@
+@import "@blueprintjs/core/lib/scss/variables";
+
+.unauthorized__wrapper{
+  color: $dark-gray3;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+
+  .image{
+    width: 200px;
+    height: 200px;
+    margin-top: 200px;
+    margin-bottom: 30px;
+
+    img{
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
